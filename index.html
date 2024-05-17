@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodePlayground</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.23.0/min/vs/loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <h1>CodePlayground</h1>
+    <div id="container">
+        <input type="file" id="fileInput" accept=".json" />
+        <button type="submit" id="Get_question">Get Contents</button>
+        <div id="question-editor">
+            <h2>Question Editor</h2>
+            <p id="questions_data"></p>
+        </div>
+        <div id="code-editor-container">
+            <div class="dropdown">
+                <select name="language" id="language">
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="c++">C++</option>
+                    <option value="java">Java</option>
+                </select>
+            </div>
+            <div id="code-editor"></div>
+        </div>
+        <div id="console">
+            <h2></h2>
+        </div>
+        <button type="submit" id="Execute">Execute</button>
+        <button type="button" id="Clear_Console">Clear Console</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
